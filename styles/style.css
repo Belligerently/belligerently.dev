@@ -9,21 +9,29 @@
 html, body {
     margin: 0;
     padding: 0;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     overflow: hidden; /* Prevents unintended scrolling */
-    position: relative; /* Ensures proper alignment */
-    background: url('https://cdn.nest.rip/uploads/7fdc905c-27b8-42fd-a677-9cb75bf51832.jpg') no-repeat center center fixed;
-    background-size: cover; /* Ensures full coverage of viewport */
-    background-attachment: fixed;
-    background-color: black; /* Fallback to cover gaps */
+    overscroll-behavior: none; /* Fixes mobile overscroll bounce */
+    touch-action: pan-y; /* Allows vertical scrolling only */
 }
 
 body {
-    padding-top: env(safe-area-inset-top, 0); /* Handles top safe area for notches */
-    padding-bottom: env(safe-area-inset-bottom, 0); /* Handles bottom safe area */
+    background: url('https://cdn.nest.rip/uploads/7fdc905c-27b8-42fd-a677-9cb75bf51832.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #070100;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+    margin: 0;
+    position: relative; /* Ensures ::before overlay is positioned correctly */
+    z-index: 0; /* Allows content to stay above the overlay */
 }
 
+/* Overlay */
 body::before {
     content: '';
     position: absolute; /* Covers the content inside the body */
@@ -32,7 +40,7 @@ body::before {
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
-    z-index: -1;
+    z-index: -1; /* Pushes the overlay below the content */
 }
 
 /* Container */
