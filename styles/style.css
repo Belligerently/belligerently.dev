@@ -9,28 +9,19 @@
 html, body {
     margin: 0;
     padding: 0;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     overflow: hidden; /* Prevents unintended scrolling */
-    overscroll-behavior: none; /* Fixes mobile overscroll bounce */
-    touch-action: pan-y; /* Allows vertical scrolling only */
+    position: relative; /* Ensures proper alignment */
+    background: url('https://cdn.nest.rip/uploads/7fdc905c-27b8-42fd-a677-9cb75bf51832.jpg') no-repeat center center fixed;
+    background-size: cover; /* Ensures full coverage of viewport */
+    background-attachment: fixed;
+    background-color: black; /* Fallback to cover gaps */
 }
 
 body {
-    background: url('https://cdn.nest.rip/uploads/7fdc905c-27b8-42fd-a677-9cb75bf51832.jpg') no-repeat center center fixed;
-    background-size: 100vw 100vh; /* Force the background to exactly match the viewport size */
-    background-attachment: fixed;
-    color: #070100;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    min-height: 100vh;
-    position: relative;
-    padding: 0;
-    padding-top: env(safe-area-inset-top, 0); /* Adjust for safe area */
-    padding-bottom: env(safe-area-inset-bottom, 0);
+    padding-top: env(safe-area-inset-top, 0); /* Handles top safe area for notches */
+    padding-bottom: env(safe-area-inset-bottom, 0); /* Handles bottom safe area */
 }
 
 body::before {
@@ -124,9 +115,6 @@ h1 {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    body {
-        background-size: 120vw 120vh; /* Enlarges the image for mobile devices */
-    }
     h1 {
         font-size: 2rem;
     }
