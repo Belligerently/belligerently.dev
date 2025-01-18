@@ -26,7 +26,6 @@ body {
     align-items: center;
     text-align: center;
     min-height: 100vh;
-    margin: 0;
     position: relative; /* Ensures ::before overlay is positioned correctly */
     z-index: 0; /* Allows content to stay above the overlay */
 }
@@ -34,11 +33,11 @@ body {
 /* Overlay */
 body::before {
     content: '';
-    position: absolute; /* Covers the content inside the body */
+    position: fixed; /* Ensures overlay covers the entire viewport */
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 100vw; /* Full width of the viewport */
+    height: 100vh; /* Full height of the viewport */
     background: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
     z-index: -1; /* Pushes the overlay below the content */
 }
