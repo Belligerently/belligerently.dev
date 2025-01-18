@@ -124,6 +124,9 @@ h1 {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    body {
+        background-size: 120vw 120vh; /* Enlarges the image for mobile devices */
+    }
     h1 {
         font-size: 2rem;
     }
