@@ -1,5 +1,3 @@
-
-
 /* General Reset */
 * {
     margin: 0;
@@ -8,6 +6,16 @@
 }
 
 /* Body Style with Overlay */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* Prevents unintended scrolling */
+    overscroll-behavior: none; /* Fixes mobile overscroll bounce */
+    touch-action: pan-y; /* Allows vertical scrolling only */
+}
+
 body {
     background: url('https://cdn.nest.rip/uploads/7fdc905c-27b8-42fd-a677-9cb75bf51832.jpg') no-repeat center center fixed;
     background-size: cover;
