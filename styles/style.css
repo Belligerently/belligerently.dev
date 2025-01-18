@@ -1,47 +1,55 @@
 
+/* General Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Body Styles */
 body {
     background-color: #1a1a1a;
     color: #ffffff;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
+    min-height: 100vh;
+    margin: 0;
 }
 
+/* Container */
 .container {
     padding: 20px;
-    max-width: 600px;
+    max-width: 90%;
+    width: 100%;
+    margin: 0 auto;
 }
 
+/* Profile Picture */
 .profile-pic {
-    width: 150px;
-    height: 150px;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
     margin-bottom: 20px;
     border: 3px solid #ffffff;
 }
 
+/* Typography */
 h1 {
-    font-size: 2.5em;
+    font-size: 2.5rem;
     margin-bottom: 10px;
-    color: #ffffff;
 }
 
 .bio {
     color: #cccccc;
     margin-bottom: 30px;
-    font-size: 1.1em;
+    font-size: 1.1rem;
     line-height: 1.6;
 }
 
+/* Social Links */
 .social-links {
     display: flex;
     flex-direction: column;
@@ -52,15 +60,15 @@ h1 {
 .social-link {
     background-color: #ffffff;
     color: #1a1a1a;
-    font-size: 1.3em;
+    font-size: 1.2rem;
     font-weight: bold;
     text-decoration: none;
-    padding: 18px 0; /* Uniform vertical padding */
-    width: 320px; /* Fixed width for all buttons */
-    border-radius: 35px;
+    padding: 12px 0;
+    width: 100%;
+    max-width: 300px;
+    border-radius: 30px;
     text-align: center;
     transition: all 0.3s ease;
-    display: block;
     margin: 0 auto;
 }
 
@@ -71,6 +79,7 @@ h1 {
     transform: translateY(-3px);
 }
 
+/* Tags */
 .tags {
     margin: 20px 0;
     display: flex;
@@ -83,27 +92,27 @@ h1 {
     background-color: #333333;
     padding: 5px 15px;
     border-radius: 15px;
-    font-size: 0.9em;
+    font-size: 0.9rem;
     color: #cccccc;
 }
 
-.custom-icon {
-    width: 20px;
-    height: 20px;
-    margin-right: 10px;
-    vertical-align: middle;
-}
-
-.custom-icon {
-    width: 20px;
-    height: 20px;
-    margin-right: 10px;
-    vertical-align: middle;
-}
-
-.custom-icon {
-    width: 20px;
-    height: 20px;
-    margin-right: 10px;
-    vertical-align: middle;
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+    .bio {
+        font-size: 1rem;
+    }
+    .profile-pic {
+        width: 100px;
+        height: 100px;
+    }
+    .social-link {
+        font-size: 1rem;
+        padding: 10px 0;
+    }
+    .container {
+        padding: 10px;
+    }
 }
