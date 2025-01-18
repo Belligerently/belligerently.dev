@@ -29,6 +29,8 @@ body {
     margin: 0;
     position: relative; /* Ensures ::before overlay is positioned correctly */
     z-index: 0; /* Allows content to stay above the overlay */
+    padding-top: env(safe-area-inset-top); /* Adjusts for the top safe area */
+    padding-bottom: env(safe-area-inset-bottom); /* Adjusts for the bottom safe area */
 }
 
 /* Overlay */
