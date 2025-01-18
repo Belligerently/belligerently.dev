@@ -9,7 +9,7 @@
 
 /* Body Style with Overlay */
 body {
-    background: url('assets/background-image.png') no-repeat center center fixed;
+    background: url('assets/background.webp') no-repeat center center fixed;
     background-size: cover;
     color: #ffffff;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
