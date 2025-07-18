@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', function() {
     "stat2Number": "5+",
     "stat2Label": "Projects",
     "stat3Number": "∞",
-    "stat3Label": "Coffee"
+    "stat3Label": "Possibilities"
 };
     
     // Apply dashboard settings to the site
