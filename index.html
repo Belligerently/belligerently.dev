@@ -1,41 +1,145 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Belligerently - Bio</title>
+    <title>Belligerently - Developer & Designer</title>
     <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Animated background -->
+    <div id="particles-container"></div>
+    
+    <!-- Main container -->
     <div class="container">
-        <img src="assets/profile-pic.jpg" alt="Profile Picture" class="profile-pic">
-        <h1>Belligerently</h1>
-        <div class="tags">
-            <span class="tag">Developer</span>
-            <span class="tag">Designer</span>
+        <!-- Profile card -->
+        <div class="profile-card">
+            <div class="profile-header">
+                <div class="profile-pic-wrapper">
+                    <img src="assets/profile-pic.jpg" alt="Belligerently" class="profile-pic">
+                    <div class="profile-ring"></div>
+                    <div class="status-indicator">
+                        <span class="status-dot"></span>
+                    </div>
+                </div>
+                
+                <div class="profile-info">
+                    <h1 class="name">Belligerently</h1>
+                    <p class="title">iOS Developer & Designer</p>
+                    <div class="badges">
+                        <span class="badge">Not available</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="profile-body">
+                <p class="bio">
+                    Passionate iOS developer crafting beautiful digital experiences. 
+                    I specialize in SwiftUI, user interface design, and creating apps that users love.
+                </p>
+                
+                <div class="skills">
+                    <div class="skill-tag">Swift</div>
+                    <div class="skill-tag">CSS</div>
+                    <div class="skill-tag">HTML</div>
+                    <div class="skill-tag">C#</div>
+                    <div class="skill-tag">Windows</div>
+                    <div class="skill-tag">iOS</div>
+                </div>
+                
+                <div class="social-links">
+                    <a href="https://github.com/belligerently" class="social-link" data-platform="github">
+                        <div class="social-icon">
+                            <i class="fab fa-github"></i>
+                        </div>
+                        <div class="social-content">
+                            <span class="social-title">GitHub</span>
+                            <span class="social-subtitle">View my code</span>
+                        </div>
+                        <i class="fas fa-external-link-alt social-arrow"></i>
+                    </a>
+                    
+                    <a href="https://bsky.app/profile/belligerently.dev" class="social-link" data-platform="bluesky">
+                        <div class="social-icon">
+                            <i class="fas fa-at"></i>
+                        </div>
+                        <div class="social-content">
+                            <span class="social-title">BlueSky</span>
+                            <span class="social-subtitle">Follow updates</span>
+                        </div>
+                        <i class="fas fa-external-link-alt social-arrow"></i>
+                    </a>
+                    
+    <!-- Mastodon link added below -->
+                    <a href="https://fosstodon.org/@Belligerently" class="social-link" data-platform="mastodon">
+                        <div class="social-icon">
+                            <i class="fas fa-share-alt"></i>
+                        </div>
+                        <div class="social-content">
+                            <span class="social-title">Mastodon</span>
+                            <span class="social-subtitle">Follow updates</span>
+                        </div>
+                        <i class="fas fa-external-link-alt social-arrow"></i>
+                    </a>
+                    
+                    <a href="mailto:zac@belligerently.dev" class="social-link" data-platform="email">
+                        <div class="social-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="social-content">
+                            <span class="social-title">Email</span>
+                            <span class="social-subtitle">Get in touch</span>
+                        </div>
+                        <i class="fas fa-external-link-alt social-arrow"></i>
+                    </a>
+                    
+                    <a href="https://discord.com/users/shallow." class="social-link" data-platform="discord">
+                        <div class="social-icon">
+                            <i class="fab fa-discord"></i>
+                        </div>
+                        <div class="social-content">
+                            <span class="social-title">Discord</span>
+                            <span class="social-subtitle">Let's chat</span>
+                        </div>
+                        <i class="fas fa-external-link-alt social-arrow"></i>
+                    </a>
+                </div>
+                
+                <div class="cta-section">
+                    <a href="mailto:zac@belligerently.dev" class="cta-button">
+                        <span>Start a project</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
         </div>
-        <p class="bio">
-            Passionate iOS Developer
-        </p>
-        <div class="social-links">
-            <a href="https://bsky.app/profile/belligerently.dev" class="social-link">
-                <i class="fa-solid fa-cloud"></i> BlueSky
-            </a>
-            <a href="https://github.com/belligerently" class="social-link">
-                <i class="fab fa-github"></i> GitHub
-            </a>
-            <a href="https://instagram.com/yourusername" class="social-link">
-                <i class="fab fa-instagram"></i> Instagram
-            </a>
-            <a href="mailto:spec.matrix.app@gmail.com" class="social-link">
-                <i class="fas fa-envelope"></i> Email
-            </a>
-            <a href="https://discord.com/users/shallow." class="social-link">
-                <i class="fab fa-discord"></i> Discord
-            </a>
+        
+        <!-- Quick stats -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-number">1</div>
+                <div class="stat-label">Year Experience</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">5+</div>
+                <div class="stat-label">Projects</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">∞</div>
+                <div class="stat-label">Coffee</div>
+            </div>
         </div>
     </div>
+    
+    <!-- Theme toggle -->
+    <button class="theme-toggle" aria-label="Toggle theme">
+        <i class="fas fa-sun"></i>
+    </button>
+    
+    <script src="script.js"></script>
 </body>
 </html>
